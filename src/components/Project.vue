@@ -16,9 +16,9 @@
 
         <div class="col-lg-6 text-center">
           <div class="project-desc">
-            <h2 v-if="biltmore">Biltmore Companion Site</h2>
-            <h2 v-if="stokes">Stokes County Website Re-Design</h2>
-            <h2 v-if="uxDesign">UX in Mind Wordpress Site</h2>
+            <h2>
+              {{this.getTitle()}}
+            </h2>
             <p class="pt-4">
               {{this.getDescription()}}
             </p>
@@ -70,12 +70,26 @@ export default {
         if (this.uxDesign) {
           return 'In this project, I created a fictional WordPress blog for a UX Design blog. With the use of widgets, plugins, and custom CSS, I was able to create a fully-functional blog website with a responsive design.'
         }
+    },
+    getTitle: function () {
+        if (this.biltmore) {
+          return 'Biltmore Companion Site'
+        }
+        if (this.stokes) {
+          return 'Stokes County Website Re-Design'
+        }
+        if (this.uxDesign) {
+          return 'UX in Mind Wordpress Blog'
+        }
     }
   }
 }
 </script>
 
 <style scoped>
+  h2 {
+    font-weight: bold;
+  }
   img {
     box-shadow: 5px 5px 21px 5px rgba(0,0,0,0.25);
   }
@@ -92,5 +106,10 @@ export default {
     border-bottom: 2px solid #000;
     font-weight: bold;
     font-size: 14pt;
+  }
+  .see-more:hover {
+    text-decoration: none;
+    padding-bottom: 0.25rem;
+    transition: 0.3s ease-in-out;
   }
 </style>
