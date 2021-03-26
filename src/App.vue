@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Navigation />
+    <router-view></router-view>
     <Landing />
     <About />
     <Project :biltmore="true" :projectLeft="true" />
