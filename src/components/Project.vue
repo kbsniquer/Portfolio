@@ -2,17 +2,16 @@
     <div class="project-block" id="projects">
       <div class="row align-items-center w-100">
             <div :class="projectLeft ? 'projectLeftStyle col-lg-6' : 'projectRightStyle col-lg-6'">
-        <!-- <div class="col-6"> -->
-          <a v-if="biltmore" href="https://wcet3.waketech.edu/ksniquer/WEB125/Lesson13/" target="_blank">
-            <img v-if="biltmore" class="img-fluid" src="../assets/Biltmore.jpg" alt="Fake Biltmore Estate website">
-          </a>
-          <a v-if="stokes" href="https://wcet3.waketech.edu/ksniquer/WEB125/StokesCounty/index.html" target="_blank">
-            <img v-if="stokes" class="img-fluid" src="../assets/Stokes-County.jpg" alt="Re-designed Stokes County Official website">
-          </a>
-          <a v-if="uxDesign" href="https://wcet3.waketech.edu/ksniquer/WEB125/Lesson13/" target="_blank">
-            <img v-if="uxDesign" class="img-fluid" src="../assets/UX-inMind.jpg" alt="UX in Mind Wordpress website">
-          </a>
-        </div>
+              <a v-if="biltmore" href="https://wcet3.waketech.edu/ksniquer/WEB125/Lesson13/" target="_blank">
+                <img v-if="biltmore" class="img-fluid" src="../assets/Biltmore.jpg" alt="Fake Biltmore Estate website">
+              </a>
+              <a v-if="stokes" href="https://wcet3.waketech.edu/ksniquer/WEB125/StokesCounty/index.html" target="_blank">
+                <img v-if="stokes" class="img-fluid" src="../assets/Stokes-County.jpg" alt="Re-designed Stokes County Official website">
+              </a>
+              <a v-if="uxDesign" href="https://wcet3.waketech.edu/ksniquer/WEB125/Lesson13/" target="_blank">
+                <img v-if="uxDesign" class="img-fluid" src="../assets/UX-inMind.jpg" alt="UX in Mind Wordpress website">
+              </a>
+            </div>
 
         <div class="col-lg-6 text-center">
           <div class="project-desc">
@@ -26,7 +25,7 @@
           </div>
         </div>
       </div>
-  </div>
+    </div>
 </template>
 
 <script>
@@ -91,7 +90,7 @@ export default {
     font-weight: bold;
   }
   img {
-    box-shadow: 5px 5px 21px 5px rgba(0,0,0,0.25);
+    box-shadow: 5px 5px 21px 5px rgba(0,0,0,0.125);
   }
   .projectRightStyle {
     order: 13;
@@ -112,4 +111,5 @@ export default {
     padding-bottom: 0.25rem;
     transition: 0.3s ease-in-out;
   }
+
 </style>
